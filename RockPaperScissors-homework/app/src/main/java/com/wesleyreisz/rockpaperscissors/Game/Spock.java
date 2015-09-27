@@ -4,24 +4,20 @@ import com.wesleyreisz.rockpaperscissors.GameUtils;
 import com.wesleyreisz.rockpaperscissors.R;
 
 /**
- * Created by wesleyreisz on 9/13/15.
+ * Created by Tyler on 9/26/15.
  */
-public class Paper implements GameType {
-
+public class Spock implements GameType{
     @Override
     public String eval(Integer opponentChoice) {
         if (opponentChoice== R.id.btnRock){
             return GameUtils.BEATS;
-        }else if (opponentChoice==R.id.btnSpock){
+        }else if(opponentChoice==R.id.btnScissors){
             return GameUtils.BEATS;
-        }
-        else if (opponentChoice==R.id.btnScissors){
+        }else if (opponentChoice==R.id.btnPaper){
             return GameUtils.LOSES_TO;
-        }
-        else if (opponentChoice==R.id.btnLizard){
+        }else if (opponentChoice==R.id.btnLizard){
             return GameUtils.LOSES_TO;
-        }
-        else{
+        }else {
             return GameUtils.TIES;
         }
     }
